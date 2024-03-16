@@ -37,7 +37,7 @@ _LOGGER = logging.getLogger(__name__)
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     """Set up OpenAI Conversation from a config entry."""
   
-    client = AzureOpenAI(azure_endpoint= entry.data[CONF_API_BASE],
+    client = AzureOpenAI(azure_endpoint= entry.data[CONF_API_BASE]),
     api_key = entry.data[CONF_API_KEY],                     
     api_version = entry.data[CONF_API_VERSION]
 
