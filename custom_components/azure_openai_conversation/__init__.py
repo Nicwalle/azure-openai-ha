@@ -5,7 +5,7 @@ from functools import partial
 import logging
 from typing import Literal
 
-import openai
+from openai import AzureOpenAI
 from openai import error
 
 from homeassistant.components import conversation
