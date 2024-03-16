@@ -7,7 +7,7 @@ import types
 from types import MappingProxyType
 from typing import Any
 
-import openai
+from openai import AzureOpenAI
 from openai import error
 import voluptuous as vol
 
@@ -63,10 +63,9 @@ async def validate_input(hass: HomeAssistant, data: dict[str, Any]) -> None:
 
     Data has the keys from STEP_USER_DATA_SCHEMA with values provided by the user.
     """
-    openai.api_type = "azure"
-    openai.api_key = data[CONF_API_KEY]
-    openai.api_base = data[CONF_API_BASE]
-    openai.api_version = data[CONF_API_VERSION]
+    client = AzureOpenAI(azure_endpoint= data[CONF_API_BASE]),
+    api_key = data[CONF_API_KEY],
+    api_version = data[CONF_API_VERSION]
 
     await hass.async_add_executor_job(partial(openai.Model.list, request_timeout=10))
 
