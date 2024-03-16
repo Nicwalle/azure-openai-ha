@@ -1,7 +1,7 @@
 {
   "domain": "azure_openai_conversation",
   "name": "Azure OpenAI Conversation",
-  "codeowners": ["@joselcaguilar"],
+  "codeowners": ["@koenraadhaedens"],
   "config_flow": true,
   "dependencies": ["conversation"],
   "documentation": "https://github.com/joselcaguilar/azure-openai-ha",
