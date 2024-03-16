@@ -118,7 +118,7 @@ class OpenAIAgent(conversation.AbstractConversationAgent):
         _LOGGER.debug("Prompt for %s: %s", model, messages)
 
         try:
-            result = await openai.ChatCompletion.acreate(
+            result = await client.chat.completion.acreate(
                 engine=model,
                 messages=messages,
                 max_tokens=max_tokens,
