@@ -1,13 +1,13 @@
 {
   "domain": "azure_openai_conversation",
   "name": "Azure OpenAI Conversation",
-  "codeowners": ["@koenraadhaedens"],
+  "codeowners": ["@Nicwalle"],
   "config_flow": true,
   "dependencies": ["conversation"],
-  "documentation": "https://github.com/koenraadhaedens/azure-openai-ha",
+  "documentation": "https://github.com/Nicwalle/azure-openai-ha",
   "integration_type": "service",
   "iot_class": "cloud_polling",
-  "issue_tracker": "https://github.com/koenraadhaedens/azure-openai-ha/issues",
+  "issue_tracker": "https://github.com/Nicwalle/azure-openai-ha/issues",
   "requirements": ["openai==1.0.0"],
   "version": "v0.0.0"
 }
